@@ -274,11 +274,11 @@ static const float kCursorVelocity = 1.0f/8.0f;
     
     if (cursorLocation > startRange.location)
     {
-        self.selectedRange = NSMakeRange(startRange.location, fabsf(startRange.location - cursorLocation));
+        self.selectedRange = NSMakeRange(startRange.location, ABS(startRange.location - cursorLocation));
     }
     else
     {
-        self.selectedRange = NSMakeRange(cursorLocation, fabsf(startRange.location - cursorLocation));
+        self.selectedRange = NSMakeRange(cursorLocation, ABS(startRange.location - cursorLocation));
     }
 }
 
