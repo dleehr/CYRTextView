@@ -242,7 +242,7 @@ static const float kCursorVelocity = 1.0f/8.0f;
     if (gestureRecognizer == _singleFingerPanRecognizer || gestureRecognizer == _doubleFingerPanRecognizer)
     {
         CGPoint translation = [gestureRecognizer translationInView:self];
-        return fabsf(translation.x) > fabsf(translation.y);
+        return ABS(translation.x) > ABS(translation.y);
     }
     
     return YES;
